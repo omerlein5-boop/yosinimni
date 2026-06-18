@@ -32,19 +32,28 @@
 
 ## דרך ב' — GitHub Pages (חינמי לתמיד, דורש חשבון GitHub)
 
-הריפו כבר מוכן ומקומית עם commit. נשאר רק להעלות ל-GitHub ולהפעיל Pages.
+הריפו כבר מוכן מקומית עם commit. נשאר רק להעלות ל-GitHub ולהפעיל Pages.
 
-### שלב 1 — ליצור ריפו ולהעלות
+### שלב 1 — להעלות לגיטהאב
+
+**אפשרות מומלצת — GitHub Desktop (בלי טרמינל, בלי טוקנים):**
 1. פתח חשבון ב-<https://github.com> (אם אין).
-2. צור ריפו חדש בשם `yosinimni` (ריק, בלי README).
-3. בטרמינל הרץ (החלף `USERNAME` בשם המשתמש שלך):
+2. הורד והתקן **GitHub Desktop** מ-<https://desktop.github.com> → התחבר עם החשבון.
+3. בתוך האפליקציה: **File → Add Local Repository** → בחר את התיקייה
+   `Documents/claudecode/yosi-nimni-site` (כבר ריפו git מוכן).
+4. לחץ **Publish repository** → שם `yosinimni`, אפשר להשאיר Public → **Publish**.
+   זהו — כל הקבצים עלו לגיטהאב.
+
+**אפשרות לטרמינל (למתקדמים):**
+1. צור ריפו חדש ריק בשם `yosinimni` ב-<https://github.com/new> (בלי README).
+2. הרץ (החלף `USERNAME`):
    ```bash
    cd ~/Documents/claudecode/yosi-nimni-site
    git branch -M main
    git remote add origin https://github.com/USERNAME/yosinimni.git
    git push -u origin main
    ```
-   (GitHub יבקש שם משתמש + Personal Access Token כסיסמה — נוצר ב-Settings → Developer settings → Tokens.)
+   (סיסמה = Personal Access Token, נוצר ב-Settings → Developer settings → Tokens.)
 
 ### שלב 2 — להפעיל Pages
 1. ב-GitHub: **Settings → Pages**.
