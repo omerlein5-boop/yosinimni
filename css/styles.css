@@ -111,7 +111,9 @@ img { max-width: 100%; display: block; }
 .btn--dark:hover { background: #2c261d; box-shadow: var(--shadow-md); transform: translateY(-2px); }
 /* WhatsApp: official green with white text + white logo (standard look) */
 .btn--wa { background: #25d366; color: #fff; }
-.btn--wa svg { width: 20px; height: 20px; }
+/* The WhatsApp glyph's mass sits high (round bubble on top, thin tail below),
+   so nudge it down a hair to optically centre it. */
+.btn--wa svg { width: 20px; height: 20px; transform: translateY(0.5px); }
 .btn--wa:hover { background: #1eb858; box-shadow: 0 12px 30px rgba(37,211,102,.35); transform: translateY(-2px); }
 .btn--gold { background: var(--gold); color: #fff; }
 .btn--gold:hover { background: var(--gold-deep); transform: translateY(-2px); }
@@ -657,7 +659,7 @@ img { max-width: 100%; display: block; }
   transition: transform .2s var(--ease);
 }
 .wa-float:hover { transform: scale(1.08); }
-.wa-float svg { width: 32px; height: 32px; }
+.wa-float svg { width: 32px; height: 32px; transform: translateY(1px); }
 .wa-float::after {
   content: "";
   position: absolute; inset: 0;
