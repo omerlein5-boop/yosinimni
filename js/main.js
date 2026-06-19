@@ -132,7 +132,7 @@
   function buildGallery() {
     galleryEl.innerHTML = GALLERY.map(function (g, idx) {
       return '<figure class="gcard" data-cat="' + g.c + '" data-index="' + idx + '">' +
-        '<img src="' + P + g.f + '" alt="' + g.t + '" loading="lazy" />' +
+        '<img src="' + P + g.f + '" alt="' + g.t + '" loading="lazy" decoding="async" />' +
         '<figcaption class="gcard__overlay">' +
         '<span class="gcard__cat">' + CATNAME[g.c] + '</span>' +
         '<span class="gcard__title">' + g.t + '</span>' +
