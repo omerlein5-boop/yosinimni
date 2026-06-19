@@ -132,7 +132,7 @@
   function buildGallery() {
     galleryEl.innerHTML = GALLERY.map(function (g, idx) {
       return '<figure class="gcard" data-cat="' + g.c + '" data-index="' + idx + '">' +
-        '<img src="' + P + g.f + '" alt="' + g.t + '" loading="lazy" decoding="async" />' +
+        '<img src="public/thumbs/' + g.f + '" data-full="' + P + g.f + '" alt="' + g.t + '" loading="lazy" decoding="async" />' +
         '<figcaption class="gcard__overlay">' +
         '<span class="gcard__cat">' + CATNAME[g.c] + '</span>' +
         '<span class="gcard__title">' + g.t + '</span>' +
@@ -197,7 +197,7 @@
       );
       var list = visible.map(function (c) {
         var img = c.querySelector("img");
-        return { src: img.getAttribute("src"), cap: img.getAttribute("alt") };
+        return { src: img.getAttribute("data-full") || img.getAttribute("src"), cap: img.getAttribute("alt") };
       });
       var pos = visible.indexOf(card);
       openLb(list, pos < 0 ? 0 : pos);
